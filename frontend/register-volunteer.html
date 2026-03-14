@@ -1,31 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Volunteer Registration</title>
-<link rel="stylesheet" href="css/style.css">
+<title>CareConnect – Volunteer Registration</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #e0f2ff, #ffffff); /* soft blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #333;
+}
+
+header {
+    background: #0284c7; /* strong blue header */
+    color: white;
+    padding: 50px 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.card h2 {
+    margin-bottom: 30px;
+    color: #0284c7;
+}
+
+.card input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #0284c7; /* blue border */
+    font-size: 1rem;
+}
+
+.card input:focus {
+    outline: none;
+    border: 2px solid #0369a1;
+    box-shadow: 0 0 5px rgba(3,105,161,0.3);
+}
+
+.card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #0284c7; /* blue button */
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card button:hover {
+    background: #0369a1;
+    transform: scale(1.03);
+}
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>Volunteer Registration</h1>
+<h1>CareConnect</h1>
+<p>Register as a Volunteer</p>
 </header>
 
 <div class="container">
-
 <div class="card">
-
 <h2>Become a Volunteer</h2>
 
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<input id="phone" placeholder="Phone">
+<input id="name" type="text" placeholder="Name">
+<input id="email" type="email" placeholder="Email">
+<input id="phone" type="tel" placeholder="Phone">
 <input id="password" type="password" placeholder="Password">
 
 <button onclick="registerVolunteer()">Register</button>
 
 </div>
-
 </div>
 
 <script src="js/app.js"></script>
